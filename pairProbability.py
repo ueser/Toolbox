@@ -1,10 +1,20 @@
 ###
 # This code provides a way to approximate the probability of
 # finding two features together using von Neumann Diffusion Kernel.
+# Also plots a cluster heatmap of the normalized von Neumann diffusion
+#
 # by: Umut Eser, 09/15/2016
 #
 # required modules:
 # scipy, numpy, matplotlib, pandas, seaborn
+#
+#
+# How it works:
+# make your dataset a comma separated file that has the columns as features and rows as samples
+# include the feature names on top of each column
+# then run:
+# python pairProbabilty.py {path/to/dataset}.csv
+#
 ###
 
 from scipy.linalg import inv, eigvals
